@@ -1,4 +1,4 @@
-package com.premiumminds.javafxtest;
+package com.premiumminds.vlcjjavafx;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
