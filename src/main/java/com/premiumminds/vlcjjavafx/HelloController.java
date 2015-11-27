@@ -3,9 +3,12 @@ package com.premiumminds.vlcjjavafx;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.premiumminds.vlcjjavafx.component.VLCJPlayerPane;
 
 public class HelloController
 {
@@ -15,8 +18,10 @@ public class HelloController
     @FXML private TextField lastNameField;
     @FXML private Label messageLabel;
 
-    public void sayHello() {
+    @FXML private VLCJPlayerPane mpPane;
 
+    public void sayHello() {
+    	
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
 
@@ -42,5 +47,4 @@ public class HelloController
             messageLabel.setText("Hello mysterious person");
         }
     }
-
 }
