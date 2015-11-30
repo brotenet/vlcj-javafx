@@ -2,13 +2,13 @@ package com.premiumminds.vlcjjavafx.component;
 
 import java.nio.ByteBuffer;
 
+import com.sun.jna.Memory;
+
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritablePixelFormat;
 import uk.co.caprica.vlcj.component.DirectMediaPlayerComponent;
 import uk.co.caprica.vlcj.player.direct.BufferFormat;
 import uk.co.caprica.vlcj.player.direct.DefaultDirectMediaPlayer;
-
-import com.sun.jna.Memory;
 
 public class JavaFXVLCJMediaPlayerComponent extends DirectMediaPlayerComponent{
 	/**
@@ -20,7 +20,7 @@ public class JavaFXVLCJMediaPlayerComponent extends DirectMediaPlayerComponent{
 	 * Pixel format.
 	 */
 	private final WritablePixelFormat<ByteBuffer> pixelFormat;
-
+	
 	public JavaFXVLCJMediaPlayerComponent(PixelWriter pixelWriter, WritablePixelFormat<ByteBuffer> pixelFormat) {
 		super(new BufferFormatCallbackImpl());
 		this.pixelFormat = pixelFormat;

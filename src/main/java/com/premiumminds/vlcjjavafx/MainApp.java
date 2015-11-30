@@ -1,13 +1,15 @@
 package com.premiumminds.vlcjjavafx;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.sun.jna.NativeLibrary;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class MainApp extends Application {
 
@@ -20,7 +22,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
 
         log.info("Starting Hello JavaFX and Maven demonstration application");
-
+        NativeLibrary.addSearchPath("libvlc", "C:\\Program Files\\VideoLAN\\VLC");
         String fxmlFile = "/fxml/hello.fxml";
         log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();

@@ -3,21 +3,26 @@
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import com.premiumminds.vlcjjavafx.component.*?>
 <?import org.tbee.javafx.scene.layout.fxml.MigPane?>
 <?import layouttests.migfxml.sample1.*?>
 
-<MigPane id="rootPane" fx:controller="com.premiumminds.javafxtest.HelloController"
+<MigPane id="rootPane" fx:controller="com.premiumminds.vlcjjavafx.HelloController"
         styleClass="main-panel"
         layout="insets 20"
         cols="[label, pref!][grow, 50::]"
         rows=""
         xmlns:fx="http://javafx.com/fxml">
+	
+   <!-- <Label text="First Name:" /> <TextField fx:id="firstNameField" prefColumnCount="30" MigPane.cc="growx, wrap" />-->
+    <!--<Label text="Last Name:" />	<TextField fx:id="lastNameField" prefColumnCount="30" MigPane.cc="growx, wrap" />-->
 
-    <Label text="First Name:" /> <TextField fx:id="firstNameField" prefColumnCount="30" MigPane.cc="growx, wrap" />
-    <Label text="Last Name:" />	<TextField fx:id="lastNameField" prefColumnCount="30" MigPane.cc="growx, wrap" />
+    <!--<Button text="Say Hello" onAction="#sayHello" MigPane.cc="skip, gap :push, gaptop 15, wrap" />-->
 
-    <Button text="Say Hello" onAction="#sayHello" MigPane.cc="skip, gap :push, gaptop 15, wrap" />
-
-    <Label fx:id="messageLabel" styleClass="hello-message" MigPane.cc="span, growx, gaptop 15" />
-
+    <!--<Label fx:id="messageLabel" styleClass="hello-message" MigPane.cc="span, growx, gaptop 15" />-->
+    <VLCJPlayerPane id="mpPane" fx:id="mpPane" 
+		maxHeight="-Infinity" maxWidth="-Infinity" 
+		minHeight="-Infinity" minWidth="-Infinity" 
+		prefHeight="400.0" prefWidth="600.0" 
+		xmlns:fx="http://javafx.com/fxml" />
 </MigPane >
