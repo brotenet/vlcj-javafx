@@ -8,6 +8,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritablePixelFormat;
 import uk.co.caprica.vlcj.component.DirectMediaPlayerComponent;
 import uk.co.caprica.vlcj.player.direct.BufferFormat;
+import uk.co.caprica.vlcj.player.direct.BufferFormatCallback;
 import uk.co.caprica.vlcj.player.direct.DefaultDirectMediaPlayer;
 
 public class JavaFXVLCJMediaPlayerComponent extends DirectMediaPlayerComponent{
@@ -21,8 +22,8 @@ public class JavaFXVLCJMediaPlayerComponent extends DirectMediaPlayerComponent{
 	 */
 	private final WritablePixelFormat<ByteBuffer> pixelFormat;
 	
-	public JavaFXVLCJMediaPlayerComponent(PixelWriter pixelWriter, WritablePixelFormat<ByteBuffer> pixelFormat) {
-		super(new BufferFormatCallbackImpl());
+	public JavaFXVLCJMediaPlayerComponent(PixelWriter pixelWriter, WritablePixelFormat<ByteBuffer> pixelFormat, BufferFormatCallback bufferFormatCallback) {
+		super(bufferFormatCallback);
 		this.pixelFormat = pixelFormat;
 		this.pixelWriter = pixelWriter;
 		 
